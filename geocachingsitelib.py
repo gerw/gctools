@@ -104,11 +104,11 @@ def _ask_usr_pwd():
                 raise e
     import getpass
     try:
-        input = raw_input
+        my_input = raw_input
     except NameError:
-        pass
+        my_input = input
     print("Please provide your geocaching.com login credentials:")
-    usr = input("Username: ")
+    usr = my_input("Username: ")
     pwd = getpass.getpass()
     return (usr,pwd)
 
